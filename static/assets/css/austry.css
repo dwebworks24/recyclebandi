@@ -17063,15 +17063,48 @@ ul {
   mix-blend-mode: luminosity;
 }
 
+.counter-four__content  h3{
+  font-size: 30px !important;
+}
 
 
+.card .card-input-element{
+  visibility: hidden;
+}
 
+.process-one__count {
+  visibility: hidden;
+}
+.wast-types .card{
+  border: 1px solid var(--austry-bdr-color);
+  background-color: #FC811B;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
 
+.wast-types .card:hover{
+  border: 1px solid var(--austry-bdr-color);
+  background-color: #30517c;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  overflow: hidden;
+}
+.card .card-input-element{
+  visibility: hidden !important;
+}
 
-
-
-
-
+.card-input-element {
+  display: none;
+}
+.select-wast-type .card{
+  background-color: #e8f0fe;
+  width: 20%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.select-wast-type .form-check{
+  padding: 10px;
+}
 
 
 /*--------------------------------------------------------------

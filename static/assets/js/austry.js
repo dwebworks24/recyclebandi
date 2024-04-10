@@ -1001,3 +1001,47 @@
 
 
 })(jQuery);
+
+
+
+
+
+
+const radioButtons = document.querySelectorAll('input[name="btnradio"]');
+const rawMaterialRow = document.getElementById('raw_material_row');
+const whiteLabelingRow = document.getElementById('white_labeling_row');
+const packingMaterialRow = document.getElementById('packing_material_row');
+
+
+
+radioButtons.forEach((radio) => {
+    radio.addEventListener('change', function () {
+        rawMaterialRow.style.display = 'none';
+        whiteLabelingRow.style.display = 'none';
+        packingMaterialRow.style.display = 'none';
+
+        if (this.id === 'btnradio1') {
+            rawMaterialRow.style.display = 'block';
+            document.getElementById('productType').textContent = 'request'
+        } else if (this.id === 'btnradio2') {
+            whiteLabelingRow.style.display = 'block';
+        } else if (this.id === 'btnradio3') {
+            packingMaterialRow.style.display = 'block';
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const radioButtons = document.querySelectorAll('input[name="btnradio"]');
+  const eWasteHeadingSpan = document.querySelector('.mt-5.mb-5 h3 span');
+
+  radioButtons.forEach(function (radio) {
+      radio.addEventListener('change', function () {
+          if (this.checked) {
+              const labelText = this.parentElement.querySelector('h4').innerText;
+              eWasteHeadingSpan.innerText = labelText;
+          }
+      });
+  });
+});

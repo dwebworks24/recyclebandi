@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'assets/css/custome/user/login.css' %}" />
+{% endblock stylesheets %}
+
+<section class="about-one login-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 d-flex justify-content-center aligen-items-center">
+                <div class="card login-card">
+                    <div class="login-card-header">
+                        <img src="{% static 'assets/images/resources/main-logo-3.png' %}" alt="Logo" class="login-card-logo">
+                        <h5 class="mt-3">Login</h5>
+                        <p>Login to continue to the recycle bandi</p>
+                    </div>
+                    <div class="card-body login-form">
+                        <form >
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control py-2" id="username" placeholder="Enter username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control py-2" id="password" placeholder="Password">
+                            </div>
+                            <div class="text-center pt-2">
+                                <span>or</span> 
+                            </div>
+                            <div class="form-group">
+                                <label for="phonenumber">OTP Login</label>
+                                <input type="number" class="form-control py-2" id="phonenumber" placeholder="please enter phone number">
+                            </div>
+                            <button type="submit" class="btn btn-block login-btn form-control">Login</button>
+                        </form>
+                        <div class="forgot-password d-flex justify-content-between">
+                            <a href="#">Forgot password?</a>
+                            <a href="/register/"><span class="sigin-text">Didn't have an account?:</span>Signin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="{% static 'assets/js/user/login.js' %}"></script>
+{% endblock javascripts %}

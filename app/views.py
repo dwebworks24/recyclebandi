@@ -14,3 +14,51 @@ def home(request):
     except:
         html_template = loader.get_template('page-500.html')
         return HttpResponse(html_template.render(context, request))
+    
+
+
+def login(request):
+    context ={}
+    try:
+        return render(request, 'user/login.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request))
+    
+
+def register(request):
+    context ={}
+    try:
+        return render(request, 'user/register.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request))
+    
+def Userdashboard(request):
+    context ={}
+    try:
+        return render(request, 'userdashboard.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request))
+    
+
+def Clusterdashboard(request):
+    context ={}
+    try:
+        return render(request, 'userdashboard.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request))
