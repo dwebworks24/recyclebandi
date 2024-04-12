@@ -55,7 +55,18 @@ def Userdashboard(request):
 def Clusterdashboard(request):
     context ={}
     try:
-        return render(request, 'userdashboard.html')
+        return render(request, 'cluster/cluster_dashboard.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request))
+    
+def New_customer(request):
+    context ={}
+    try:
+        return render(request, 'cluster/add_customers.html')
     except template.TemplateDoesNotExist:
         html_template = loader.get_template('page-404.html')
         return HttpResponse(html_template.render(context, request))

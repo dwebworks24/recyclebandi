@@ -3,48 +3,58 @@
 {% block content %}
 
 {% block stylesheets %}
-<link rel="stylesheet" href="{% static 'assets/css/custome/user/login.css' %}" />
+<link rel="stylesheet" href="{% static 'assets/css/cluster/cluster.css' %}" />
 {% endblock stylesheets %}
-
-<section class="about-one login-section mt-5 mb-5">
-    <div class="container">
+{% include 'cluster/new-purchage_model.html' %}
+<section class="cluster-section">
+   
+    <div class="container mb-5 mt-5">
+        <div class="mb-5 custome-btn d-flex">
+            <a href="/new_shop_owner/" class="thm-btn we-provide__btn">Creat New Customer</a>&nbsp;&nbsp;
+            <a href="" class="thm-btn we-provide__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">New Purchage</a>
+        </div>
+       
         <div class="row">
-            <div class="col-md-12 col-lg-12 d-flex justify-content-center aligen-items-center">
-                <div class="card login-card">
-                    <div class="login-card-header">
-                        <img src="{% static 'assets/images/resources/main-logo-3.png' %}" alt="Logo" class="login-card-logo">
-                        <h5 class="mt-3">Register</h5>
-                    </div>
-                    <div class="card-body login-form">
-                        <form>
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter username">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">email</label>
-                                <input type="text" class="form-control" id="email" placeholder="Enter valid email">
-                            </div>
-                            <div class="form-group">
-                                <label for="phonenumber">Phone Number</label>
-                                <input type="number" class="form-control" id="phonenumber" placeholder="Enter phone number">
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Enter your Password">
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirm_password" placeholder="Re enter password">
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block login-btn form-control">Login</button>
-                        </form>
-                        <div class="forgot-password">
-                            <a href="/login/"><span class="sigin-text">All ready have an account :</span>Login</a>
-                        </div>
-                    </div>
+            <div class="container">
+                <div class="row cluster_customers_list">
+                        <table id="customers_id" class="display">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>RCB Ageed</th>
+                                    <th>Shop Name</th>
+                                    <th>Type Of Shop</th>
+                                    <th>Aera</th>
+                                    <th>City</th>
+                                    <th>Given Bags</th>
+                                    <th>Lifted Status</th>
+                                    <th>Prvious Points</th>
+                                    <th>Total</th>
+                                    <th>Action</th>
+                                 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in  staff_customer%}
+                                <tr>
+                                    <td>{{ item.first_name}}{{ item.last_name}}</td>
+                                    <td>{{ item.email}}</td>
+                                    <td>{{ item.phone}}</td>
+                                    <td>{{ item.date_of_birth}}</td>
+                                    <td>{{ item.address}}</td>
+                                    <td> <i class="fas fa fa-trash"></i>
+                                         </td>
+                                    </td>
+                                    
+                                </tr>
+                                {% endfor %}
+                                
+                            </tbody>
+                        </table>
                 </div>
-            </div>
+             </div>
           
         </div>
     </div>
@@ -54,5 +64,5 @@
 {% endblock %}
 
 {% block javascripts %}
-<script src="{% static 'assets/js/user/login.js' %}"></script>
+<script src="{% static 'assets/js/cluster/cluster.js' %}"></script>
 {% endblock javascripts %}
