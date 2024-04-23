@@ -15,7 +15,103 @@ def home(request):
         html_template = loader.get_template('page-500.html')
         return HttpResponse(html_template.render(context, request))
     
+def about(request):
+    context ={}
+    try:
+        return render(request, 'about.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request))
 
+def mixed_wast(request):
+    context ={}
+    try:
+        return render(request, 'services/mixed_waste.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+
+def metals(request):
+    context ={}
+    try:
+        return render(request, 'services/matels.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+
+def dore_to_dore(request):
+    context ={}
+    try:
+        return render(request, 'services/dore_to_dore_pick_up.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+
+def old_cloth(request):
+    context ={}
+    try:
+        return render(request, 'services/old_cloth.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request)) 
+
+
+def plastic(request):
+    context ={}
+    try:
+        return render(request, 'services/plastic.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request)) 
+
+
+def papers(request):
+    context ={}
+    try:
+        return render(request, 'services/paper.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request)) 
+
+def price_list(request):
+    context ={}
+    try:
+        return render(request, 'pricelist.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request)) 
+
+def contact(request):
+    context ={}
+    try:
+        return render(request, 'contact.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request))
 
 def login(request):
     context ={}

@@ -21,7 +21,7 @@
   --austry-font: 'Manrope', sans-serif;
   --austry-white: #ffffff;
   --austry-white-rgb: 255, 255, 255;
-  --austry-base: #fc811b;
+  --austry-base: #30517c;
   --austry-base-rgb: 252, 129, 27;
   --austry-black: #13223c;
   --austry-black-rgb: 19, 34, 60;
@@ -148,6 +148,12 @@ ul {
   .container {
     max-width: 1200px;
   }
+  .main-menu-two__main-menu-box {
+    left: 20% !important;
+}
+.main-menu-two__logo {
+  left: 10% !important;
+}
 }
 
 ::-webkit-input-placeholder {
@@ -244,6 +250,7 @@ ul {
   transition: all 0.5s linear;
   overflow: hidden;
   z-index: 1;
+  border-radius: 6px !important;
 }
 
 .thm-btn:after {
@@ -270,6 +277,7 @@ ul {
   -webkit-transform: scalex(0);
   transform: scalex(0);
   z-index: -1;
+  border-radius: 6px !important;
 }
 
 .thm-btn:hover:after {
@@ -1824,7 +1832,7 @@ ul {
   position: relative;
   display: block;
   margin-right: 170px;
-  padding: 32px 0;
+  padding: 12px 0;
 }
 
 .main-menu-two__main-menu-box {
@@ -3040,6 +3048,7 @@ ul {
 
 .main-slider__btn {
   background-color: var(--austry-base);
+  border-radius: 6px !important;
 }
 
 .main-slider__btn:hover {
@@ -5316,15 +5325,20 @@ ul {
 }
 
 .trusted-one__btn {
-  background-color: var(--austry-base);
+  background-color: var(--austry-white);
+  color:var(--austry-base);
+  
 }
 
 .trusted-one__btn:hover {
-  color: var(--austry-black);
+  color: var(--austry-white);
+  border-radius: 6px !important;
 }
 
 .trusted-one__btn::after {
-  background-color: var(--austry-white);
+  background-color: var(--austry-base);
+  color:var(--austry-white) !important;
+  border-radius: 6px !important;
 }
 
 /*--------------------------------------------------------------
@@ -13662,6 +13676,7 @@ ul {
   height: 2px;
   width: 42px;
   background-color: var(--austry-base);
+  display: none !important;
 }
 
 .project-six__title {
@@ -17107,7 +17122,35 @@ ul {
 }
 
 
+.main-menu-two__cart-box li {
+  list-style: none;
+}
+
+
 /*--------------------------------------------------------------
 # Boxed Version
 --------------------------------------------------------------*/
+
+.slider-1{
+  background-image: url(../images/backgrounds/1.png) !important;
+  background-size: cover;
+}
+.slider-2{
+  background-image: url(../images/backgrounds/2.png) !important;
+}
+.slider-3{
+  background-image: url(../images/backgrounds/3.png) !important;
+}
+
+.trusted-one__bg {
+  background-image: url(../images/backgrounds/banner-1894x688.png);
+}
+
+.sel-steps .feature-three__single{
+  border-radius: 5px !important;
+}
+
+.testimonial-one__bg{
+  background-image: url(../images/shapes/customer_reviews.png) !important;
+}
 
