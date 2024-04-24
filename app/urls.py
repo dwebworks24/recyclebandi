@@ -4,7 +4,8 @@ from .views import *
 
 urlpatterns = [
     # views logic 
-    path('', home, name="home"),
+    path('', Commingsoon, name="commingsoon"),
+    path('home/', home, name="home"),
     path('about/', about, name="about"),
     path('price_list/', price_list, name="price_list"),
     path('papers/', papers, name="papers"),

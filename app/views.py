@@ -4,6 +4,17 @@ from django.template import loader
 from django.http import JsonResponse,HttpResponse
 # Create your views here.
 
+def Commingsoon(request):
+    context ={}
+    try:
+        return render(request, 'comming_soon.html')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('page-500.html')
+        return HttpResponse(html_template.render(context, request))
+
 def home(request):
     context ={}
     try:
